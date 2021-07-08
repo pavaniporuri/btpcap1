@@ -1,0 +1,32 @@
+### Get Users
+GET http://localhost:4004/admin/Products
+
+### Move user to another project
+POST http://localhost:4004/admin/Categories
+Content-Type: application/json
+
+{
+"ID": 50,"name": "Material", "descr":"Material Details", 
+"children": 
+[
+    {"ID": 50, "name": "Raw", "descr": "Raw Material"}, 
+    {"ID": 51, "name": "wip", "descr": "Workinprocess"}
+]
+}
+### parent list
+POST http://localhost:4004/admin/Categories
+Content-Type: application/json
+
+{
+"ID": 4,"name": "TechEd", "descr":"TechEd related topics","parent_ID":4
+}
+   
+
+### Get Projects
+GET http://localhost:4004/admin/Categories(4)?$expand=parent
+
+### Get Projects
+GET http://localhost:4004/admin/Categories(1)?$expand=children
+
+### Get Projects
+GET http://localhost:4004/admin/Categories

@@ -1,0 +1,5 @@
+title;descr;stock;price;currency_code;category_ID
+title1;descr1;100;500.45;INR;100
+title2;descr2;200;600.45;EUR;200
+title3;descr3;300;700.45;CNR;300
+title4;descr4;300;700.45;CNR;1
